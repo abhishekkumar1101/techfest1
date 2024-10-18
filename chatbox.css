@@ -1,0 +1,134 @@
+/* Chatbox Container */
+.chat-container {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    overflow: hidden;
+    border: 2px solid #005b96;
+}
+
+/* Chatbox Header */
+.chat-header {
+    background-color: #005b96;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #fff684;
+}
+
+/* Chatbox Messages Area */
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-messages .message {
+    background-color: #fff684;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Messages Sent By the User */
+#chat-messages .message.user-message {
+    background-color: #005b96;
+    color: white;
+    align-self: flex-end;
+}
+
+/* Messages Sent By the Mentor */
+#chat-messages .message.mentor-message {
+    background-color: #fff684;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Chatbox Input Area */
+.chat-input {
+    display: flex;
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-top: 2px solid #005b96;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #005b96;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #333;
+    outline: none;
+}
+
+.chat-input input[type="text"]::placeholder {
+    color: #999;
+}
+
+.chat-input button {
+    background-color: #005b96;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #003f6e;
+}
+
+/* Scrollbar Customization */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #005b96;
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: #e6f7ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        max-width: 90%;
+        right: 5%;
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        max-width: 100%;
+        right: 0;
+        bottom: 0;
+        height: 400px;
+    }
+}

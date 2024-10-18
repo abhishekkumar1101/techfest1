@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <link rel="stylesheet" href="chatbox.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f7ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .professor-details {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .professor-image {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .professor-info {
+            flex: 2;
+        }
+
+        .professor-info h2 {
+            color: #005b96;
+        }
+
+        .calendar-container {
+            margin-top: 40px;
+        }
+
+        /* Button styling */
+        .book-btn {
+            background-color: #005b96;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background-color: #fff684;
+            color: #005b96;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="professor-details">
+        <!-- Professor image -->
+        <div class="professor-image">
+            <img id="professorImage" src="images\damanpreet-singh.jpg" alt="Professor Picture" style="width:100%">
+        </div>
+
+        <!-- Professor info -->
+        <div class="professor-info">
+            <h2 id="professorName">damanpreet singh</h2>
+            <p><strong>Department:</strong> <span id="professorDepartment">Computer Science and engineering</span></p>
+            <p><strong>Experience:</strong> <span id="professorExpertise">25 years</span></p>
+            <p><strong>Email:</strong> <span id="professorEmail">damanpreets@sliet.ac.in</span></p>
+            <p><strong>Bio:</strong> <span id="professorBio">Associate Dean (ERP/SAMARTH and ACSS), SLIET</span></p>
+        </div>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Chat with Mentor</h3>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-box" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <!-- Calendar for booking -->
+    <div class="calendar-container">
+        <h3>Available Time Slots</h3>
+        <div id="calendar"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+<script src="script.js">
+    // Sample professor data (can be replaced with an API call or database)
+    
+</script>
+
+</body>
+</html>
